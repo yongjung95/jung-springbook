@@ -3,6 +3,7 @@ package com.jung.springbook.web;
 import com.jung.springbook.domain.posts.Posts;
 import com.jung.springbook.domain.posts.PostsRepository;
 import com.jung.springbook.web.dto.PostsSaveRequestDto;
+import com.jung.springbook.web.dto.PostsUpdateRequestDto;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -20,8 +23,13 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * (1) @SpringBootTest 는
+ * @WebMvcTest 의 경우 JPA 기능이 작동하지 않기때문에 지금 같이 JPA 기능까지 한번에 테스트할 때는
+ * @SpringBootTest 와 TestRestTemplate 을 사용하면 된다.
+ */
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // (1)
 public class PostsApiControllerTest {
 
     @LocalServerPort
@@ -63,4 +71,40 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getTitle()).isEqualTo(title);
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
+
+    @Test
+    public void Posts_수정된다() throws Exception{
+
+        // given
+        Posts savedPosts = postsRepository.save(Posts.builder()
+                                                        .title("title")
+                                                    .content("content")
+                                                    .author("author")
+                                                    .build());
+
+        Long updataId = savedPosts.getId();
+        String expectedTitle = "title2";
+        String expectedContent = "content2";
+
+        PostsUpdateRequestDto requestDto = PostsUpdateRequestDto.builder()
+                                                                .title(expectedTitle)
+                                                                .content(expectedContent)
+                                                                .build();
+
+        String url = "http://localhost:" + port +"/api/v1/posts/" + updataId;
+
+        HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
+
+        // when
+        ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
+
+        // then
+        assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(responseEntity.getBody()).isGreaterThan(0L);
+
+        List<Posts> all = postsRepository.findAll();
+        assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
+        assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
+    }
+
 }

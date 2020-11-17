@@ -23,10 +23,13 @@ import java.util.List;
  *
  * (3) postsRepository.findAll() 는
  * 테이블 posts 에 있는 모든 데이터를 조회해오는 메소드이다.
+ *
+ * (4) @SpringBootTest 는
+ * 자동으로 H2 데이터베이스를 실행해준다.
  */
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest //(4)
 public class PostsRepositoryTest {
 
     @Autowired
