@@ -27,6 +27,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * (1) @SpringBootTest 는
  * @WebMvcTest 의 경우 JPA 기능이 작동하지 않기때문에 지금 같이 JPA 기능까지 한번에 테스트할 때는
  * @SpringBootTest 와 TestRestTemplate 을 사용하면 된다.
+ * SpringBootTest.WebEnvironment.RANDOM_PORT 는 호스트가 사용하지 않는 랜덤 포트를 사용하겠다는 의미
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // (1)
