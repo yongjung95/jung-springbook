@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.is;
  * (2) @WebMvcTest 는
  * 여러 스프링 테스트 어노테이션 중, Web(Spring MVC)에 집중할 수 있는 어노테이션이다.
  * 선언할 경우 @Controller, @ControllerAdvice 등을 사용할 수 있다.
- * 단, @Service, @Component, @Repositroy 등은 사용할 수 없다. 여기서는 컨트롤러만 사용하기 때문에 선언한다.
+ * 단, @Service, @Component, @Repository 등은 사용할 수 없다. 여기서는 컨트롤러만 사용하기 때문에 선언한다.
  *
  * (3) @Autowired 는
  * 스프링이 관리하는 빈을 주입 받는다.
