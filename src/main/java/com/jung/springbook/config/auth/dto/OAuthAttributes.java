@@ -7,6 +7,16 @@ import lombok.Getter;
 
 import java.util.Map;
 
+/**
+ * (1) of() 는
+ * OAuth2User 에서 반환하는 사용자 정보는 Map 이기 때문에 값 하나하나를 반환해야한다.
+ *
+ * (2) toEntity() 는
+ * User 엔티티를 생성한다.
+ * OAuthAttributes 에서 엔티티를 생성하는 시점은 처음 가입할때이다.
+ * 가입할 때의 기본권한을 GUEST 로 주기 위해서 role 빌더값에는 Role.GUEST 를 사용한다.
+ *
+ */
 @Getter
 public class OAuthAttributes {
 
@@ -25,10 +35,7 @@ public class OAuthAttributes {
         this.picture = picture;
     }
 
-    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) {
-        if("naver".equals(registrationId)) {
-            return ofNaver("id", attributes);
-        }
+    public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) { // (1)
 
         return ofGoogle(userNameAttributeName, attributes);
     }
@@ -43,19 +50,8 @@ public class OAuthAttributes {
                 .build();
     }
 
-    private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes) {
-        Map<String, Object> response = (Map<String, Object>) attributes.get("response");
 
-        return OAuthAttributes.builder()
-                .name((String) response.get("name"))
-                .email((String) response.get("email"))
-                .picture((String) response.get("profile_image"))
-                .attributes(response)
-                .nameAttributeKey(userNameAttributeName)
-                .build();
-    }
-
-    public User toEntity() {
+    public User toEntity() { // (2)
         return User.builder()
                 .name(name)
                 .email(email)

@@ -1,6 +1,7 @@
 package com.jung.springbook.config.auth;
 
 import com.jung.springbook.config.auth.dto.OAuthAttributes;
+import com.jung.springbook.config.auth.dto.SessionUser;
 import com.jung.springbook.domain.user.User;
 import com.jung.springbook.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -55,6 +56,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes()); // (3)
 
         User user = saveOrUpdate(attributes);
+        System.out.println(user.getName());
         httpSession.setAttribute("user", new SessionUser(user)); // (4)
 
         return new DefaultOAuth2User(
