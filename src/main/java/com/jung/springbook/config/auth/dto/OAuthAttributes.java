@@ -16,6 +16,10 @@ import java.util.Map;
  * OAuthAttributes 에서 엔티티를 생성하는 시점은 처음 가입할때이다.
  * 가입할 때의 기본권한을 GUEST 로 주기 위해서 role 빌더값에는 Role.GUEST 를 사용한다.
  *
+ * (3) response 는
+ * 스프링 시큐리티에선 하위 필드를 명시할 수 없는데, 최상위 필드들만 user_name 으로 지정이 가능하다.
+ * 하지만 네이버에 요청했을때 리턴값 최상위 필드는 resultCode, message, response 이다.
+ * 이러기 때문에 스프링 시큐리티에서 인식 가능한 필드는 저 3개 중에 골라야한다.
  */
 @Getter
 public class OAuthAttributes {
@@ -36,11 +40,17 @@ public class OAuthAttributes {
     }
 
     public static OAuthAttributes of(String registrationId, String userNameAttributeName, Map<String, Object> attributes) { // (1)
+        if("naver".equals(registrationId)) {
+            return ofNaver("id", attributes);
+        }
+
 
         return ofGoogle(userNameAttributeName, attributes);
     }
 
     private static OAuthAttributes ofGoogle(String userNameAttributeName, Map<String, Object> attributes) {
+
+        System.out.println("구글 로그인 " +userNameAttributeName );
         return OAuthAttributes.builder()
                 .name((String) attributes.get("name"))
                 .email((String) attributes.get("email"))
@@ -50,6 +60,17 @@ public class OAuthAttributes {
                 .build();
     }
 
+    private static OAuthAttributes ofNaver(String userNameAttributeName, Map<String, Object> attributes) {
+        Map<String, Object> response = (Map<String, Object>) attributes.get("response"); // (3)
+        System.out.println("네이버 로그인 " +userNameAttributeName );
+        return OAuthAttributes.builder()
+                .name((String) response.get("name"))
+                .email((String) response.get("email"))
+                .picture((String) response.get("profile_image"))
+                .attributes(response)
+                .nameAttributeKey(userNameAttributeName)
+                .build();
+    }
 
     public User toEntity() { // (2)
         return User.builder()

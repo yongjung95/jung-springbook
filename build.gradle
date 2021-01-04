@@ -35,5 +35,8 @@ dependencies {
 
     compile('org.springframework.boot:spring-boot-starter-oauth2-client')
 
+    compile('org.springframework.session:spring-session-jdbc') // 세션 저장소로 데이터베이스 사용하기 위해 추가.
+
+    compile('org.springframework.security:spring-security-test') // 임의로 인증된 사용자를 추가하여 API 만 테스트해 볼수 있게 하기위해 , 스프링 시큐리티 테스트를 위한 여러 도구를 지원한다.
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

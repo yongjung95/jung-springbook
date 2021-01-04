@@ -1,9 +1,13 @@
 package com.jung.springbook.web;
 
+import com.jung.springbook.config.auth.SecurityConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.FilterType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -49,14 +53,21 @@ import static org.hamcrest.Matchers.is;
  * JSON 응답값을 필드별로 검증할 수 있는 메소드이다.
  * $를 기준으로 필드명을 명시한다.
  * 여기서는 name 과 amount 를 검증하니 $.name, $.amount 로 검증한다.
+ *
+ * (10) @WebMvcTest 는 WebSecurityConfigurerAdapter, WebMvcConfigurer 를 비롯한 @ControllerAdvice, @Controller 를 읽는다.
+ * 즉, @Repository, @Service, @Component 는 스캔 대상이 아니다.
+ * SecurityConfig 는 읽었지만, SecurityConfig 를 생성하기 위해 필요한 CustomOauth2UserService 는 읽을 수 없어 에러가 발생한다.
+ * 이걸 해결하기 위해 스캔 대상에서 SecurityConfig 를 제거한다.
  */
 @RunWith(SpringRunner.class) // (1)
-@WebMvcTest(controllers = HelloController.class) // (2)
+@WebMvcTest(controllers = HelloController.class, // (2)
+        excludeFilters = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)}) // (10)
 public class HelloControllerTest {
 
     @Autowired // (3)
     private MockMvc mvc; // (4)
 
+    @WithMockUser(roles="USER")
     @Test
     public void hello가_리턴된다() throws Exception{
         String hello = "hello";
@@ -66,6 +77,7 @@ public class HelloControllerTest {
                 .andExpect(content().string(hello)); // (7)
     }
 
+    @WithMockUser(roles="USER")
     @Test
     public void helloDto가_리턴된다() throws Exception{
         String name = "hello";
