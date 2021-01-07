@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.jung.springbook.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-07T00:55:06" hostname="jung-springbook" time="0.093">
+  <properties/>
+  <testcase name="롬복_기능_테스트" classname="com.jung.springbook.web.dto.HelloResponseDtoTest" time="0.093"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
