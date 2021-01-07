@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.381s</div>
+<div class="counter">0.122s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,12 +79,12 @@
 </thead>
 <tr>
 <td class="success">helloDto가_리턴된다</td>
-<td class="success">0.163s</td>
+<td class="success">0.087s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">hello가_리턴된다</td>
-<td class="success">0.218s</td>
+<td class="success">0.035s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -92,12 +92,12 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2021-01-07 09:55:03.570  INFO 9986 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.HelloControllerTest], using SpringBootContextLoader
-2021-01-07 09:55:03.570  INFO 9986 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.HelloControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-01-07 09:55:03.570  INFO 9986 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.HelloControllerTest]: HelloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-01-07 09:55:03.606  INFO 9986 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.HelloControllerTest
-2021-01-07 09:55:03.618  INFO 9986 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2021-01-07 09:55:03.621  INFO 9986 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2971f615, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2886f569, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@427f9f40, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@56ad7217, org.springframework.test.context.support.DirtiesContextTestExecutionListener@704af789, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6f787954, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51c37e64, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6c439381, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@4b12d73f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@678ca5d0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2d76d71b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5dd996af, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f1904, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@20f9ef4]
+<pre>2021-01-07 15:33:09.969  INFO 28696 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.HelloControllerTest], using SpringBootContextLoader
+2021-01-07 15:33:09.970  INFO 28696 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.HelloControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-07 15:33:09.970  INFO 28696 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.HelloControllerTest]: HelloControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-01-07 15:33:09.986  INFO 28696 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.HelloControllerTest
+2021-01-07 15:33:09.986  INFO 28696 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-01-07 15:33:09.987  INFO 28696 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ceec45, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@136345c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@b9c9f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@e15ff6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@19a2a2b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1766d10, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@141ee45, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1bf0cf4, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@198ba1a, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1705bd4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d1a2b9, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@8cc85b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@90e43a, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1dbb587]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -107,19 +107,14 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.1.7.RELEASE)
 
-2021-01-07 09:55:03.691  INFO 9986 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : Starting HelloControllerTest on jung-springbook with PID 9986 (started by ec2-user in /home/ec2-user/app/step1/jung-springbook)
-2021-01-07 09:55:03.697  INFO 9986 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : The following profiles are active: oauth
-2021-01-07 09:55:04.670  INFO 9986 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-07 09:55:04.834  INFO 9986 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-01-07 09:55:05.248  INFO 9986 --- [    Test worker] .s.s.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 5454f011-e79e-486b-b291-84d39086aeed
-
-2021-01-07 09:55:05.472  INFO 9986 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21111422, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f4fa9de, org.springframework.security.web.header.HeaderWriterFilter@10d04ebe, org.springframework.security.web.csrf.CsrfFilter@7dcf7547, org.springframework.security.web.authentication.logout.LogoutFilter@3b79ee89, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d221a5a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7657e8e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@10c93ed3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3a828a6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2874979d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74f8f036, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d7def37, org.springframework.security.web.session.SessionManagementFilter@5057df07, org.springframework.security.web.access.ExceptionTranslationFilter@3d2f215e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a89db36]
-2021-01-07 09:55:05.537  INFO 9986 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2021-01-07 09:55:05.538  INFO 9986 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 09:55:05.556  INFO 9986 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 18 ms
-2021-01-07 09:55:05.619  INFO 9986 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : Started HelloControllerTest in 1.994 seconds (JVM running for 33.622)
+2021-01-07 15:33:10.036  INFO 28696 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : Starting HelloControllerTest on AS0-W-N02169 with PID 28696 (started by FAS00143 in D:\정이\jung-springbook)
+2021-01-07 15:33:10.036  INFO 28696 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : The following profiles are active: oauth
+2021-01-07 15:33:10.498  INFO 28696 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 15:33:10.532  INFO 28696 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2021-01-07 15:33:10.670  INFO 28696 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-01-07 15:33:10.671  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-07 15:33:10.681  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 10 ms
+2021-01-07 15:33:10.699  INFO 28696 --- [    Test worker] c.j.springbook.web.HelloControllerTest   : Started HelloControllerTest in 0.71 seconds (JVM running for 10.912)
 </pre>
 </span>
 </div>
@@ -131,7 +126,7 @@ Using generated security password: 5454f011-e79e-486b-b291-84d39086aeed
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.10.2</a> at Jan 7, 2021 9:55:06 AM</p>
+<a href="http://www.gradle.org">Gradle 4.10.2</a> at 2021. 1. 7 오후 3:33:11</p>
 </div>
 </div>
 </body>
