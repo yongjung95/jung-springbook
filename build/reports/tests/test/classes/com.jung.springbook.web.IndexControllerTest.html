@@ -41,7 +41,11 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
+<<<<<<< Updated upstream
 <div class="counter">0.327s</div>
+=======
+<div class="counter">0.366s</div>
+>>>>>>> Stashed changes
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +83,11 @@
 </thead>
 <tr>
 <td class="success">메인페이지_로딩</td>
+<<<<<<< Updated upstream
 <td class="success">0.327s</td>
+=======
+<td class="success">0.366s</td>
+>>>>>>> Stashed changes
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,6 +95,7 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
+<<<<<<< Updated upstream
 <pre>15:33:00.780 [Test worker] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.jung.springbook.web.IndexControllerTest]
 15:33:00.788 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 15:33:00.796 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
@@ -156,6 +165,17 @@ Hibernate: create table user (id bigint not null auto_increment, created_date da
 2021-01-07 15:33:07.598  INFO 28696 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2021-01-07 15:33:07.600  INFO 28696 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2021-01-07 15:33:07.627  INFO 28696 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+=======
+<pre>2021-01-07 11:19:36.403  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.IndexControllerTest], using SpringBootContextLoader
+2021-01-07 11:19:36.405  INFO 3324 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.IndexControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-07 11:19:36.406  INFO 3324 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.IndexControllerTest]: IndexControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-01-07 11:19:36.409  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.IndexControllerTest
+2021-01-07 11:19:36.410  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2021-01-07 11:19:36.415  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8488992, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1c97514a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1a1a718c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4d79a7bc, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1b1a398, org.springframework.test.context.transaction.TransactionalTestExecutionListener@278abfe5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ed53c89, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@6e9122a8, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@62b0f181, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@10b71fa5, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@57c1584e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3022b47c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@55fb7700, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7d19102d]
+2021-01-07 11:19:36.627  INFO 3324 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 11:19:36.627  INFO 3324 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-07 11:19:36.630  INFO 3324 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+>>>>>>> Stashed changes
 Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_ order by posts0_.id DESC
 </pre>
 </span>
@@ -168,7 +188,11 @@ Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, po
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
+<<<<<<< Updated upstream
 <a href="http://www.gradle.org">Gradle 4.10.2</a> at 2021. 1. 7 오후 3:33:11</p>
+=======
+<a href="http://www.gradle.org">Gradle 4.10.2</a> at Jan 7, 2021 11:19:37 AM</p>
+>>>>>>> Stashed changes
 </div>
 </div>
 </body>
