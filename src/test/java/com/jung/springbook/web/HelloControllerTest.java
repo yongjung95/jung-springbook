@@ -61,7 +61,7 @@ import static org.hamcrest.Matchers.is;
  */
 @RunWith(SpringRunner.class) // (1)
 @WebMvcTest(controllers = HelloController.class, // (2)
-        excludeFilters = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)}) // (10)
+        excludeFilters = { @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)}, secure = false) // (10)
 public class HelloControllerTest {
 
     @Autowired // (3)
