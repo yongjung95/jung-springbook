@@ -1,0 +1,10 @@
+com/jung/springbook/web/dto/HelloResponseDtoTest.java
+ com.jung.springbook.web.dto.HelloResponseDtoTest
+com/jung/springbook/web/HelloControllerTest.java
+ com.jung.springbook.web.HelloControllerTest
+com/jung/springbook/domain/posts/PostsRepositoryTest.java
+ com.jung.springbook.domain.posts.PostsRepositoryTest
+com/jung/springbook/web/PostsApiControllerTest.java
+ com.jung.springbook.web.PostsApiControllerTest
+com/jung/springbook/web/IndexControllerTest.java
+ com.jung.springbook.web.IndexControllerTest
