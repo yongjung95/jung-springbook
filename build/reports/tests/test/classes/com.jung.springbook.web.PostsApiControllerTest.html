@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class com.jung.springbook.web.PostsApiControllerTest</title>
+<title>Test results - PostsApiControllerTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class com.jung.springbook.web.PostsApiControllerTest</h1>
+<h1>PostsApiControllerTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
 <a href="../packages/com.jung.springbook.web.html">com.jung.springbook.web</a> &gt; PostsApiControllerTest</div>
@@ -41,11 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<<<<<<< Updated upstream
-<div class="counter">0.121s</div>
-=======
-<div class="counter">0.581s</div>
->>>>>>> Stashed changes
+<div class="counter">0.153s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,30 +78,18 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Posts_등록된다</td>
-<<<<<<< Updated upstream
-<td class="success">0.073s</td>
-=======
-<td class="success">0.432s</td>
->>>>>>> Stashed changes
+<td class="success">Posts_등록된다()</td>
+<td class="success">0.092s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Posts_삭제된다</td>
-<<<<<<< Updated upstream
-<td class="success">0.029s</td>
-=======
-<td class="success">0.093s</td>
->>>>>>> Stashed changes
+<td class="success">Posts_삭제된다()</td>
+<td class="success">0.041s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Posts_수정된다</td>
-<<<<<<< Updated upstream
-<td class="success">0.019s</td>
-=======
-<td class="success">0.056s</td>
->>>>>>> Stashed changes
+<td class="success">Posts_수정된다()</td>
+<td class="success">0.020s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -113,99 +97,21 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<<<<<<< Updated upstream
-<pre>2021-01-07 15:33:10.830  INFO 28696 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.PostsApiControllerTest], using SpringBootContextLoader
-2021-01-07 15:33:10.831  INFO 28696 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-01-07 15:33:10.831  INFO 28696 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-01-07 15:33:10.834  INFO 28696 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.PostsApiControllerTest
-2021-01-07 15:33:10.835  INFO 28696 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2021-01-07 15:33:10.836  INFO 28696 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1339cd0, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@f3b330, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@318768, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@17866d1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@b0b1b2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@101f5a7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1273e68, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@15f9db3, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@f840b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@9fede0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6d48e5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10af49e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@11d1628, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6a1d46]
-2021-01-07 15:33:10.847  INFO 28696 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 15:33:10.848  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 15:33:10.851  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-=======
-<pre>2021-01-07 11:19:30.369  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.PostsApiControllerTest], using SpringBootContextLoader
-2021-01-07 11:19:30.374  INFO 3324 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-01-07 11:19:30.375  INFO 3324 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-01-07 11:19:30.392  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.PostsApiControllerTest
-2021-01-07 11:19:30.401  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2021-01-07 11:19:30.402  INFO 3324 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e94e50b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@ae30f0a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@408df793, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1d161b7a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3483196e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@268adbab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@9949186, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@24f48605, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@890a39c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@783776a6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5502d087, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5546a08c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@584765fb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b86ba13]
-
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.1.7.RELEASE)
-
-2021-01-07 11:19:30.485  INFO 3324 --- [    Test worker] c.j.s.web.PostsApiControllerTest         : Starting PostsApiControllerTest on jung-springbook with PID 3324 (started by ec2-user in /home/ec2-user/app/step1/jung-springbook)
-2021-01-07 11:19:30.488  INFO 3324 --- [    Test worker] c.j.s.web.PostsApiControllerTest         : The following profiles are active: oauth
-2021-01-07 11:19:30.938  INFO 3324 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2021-01-07 11:19:30.963  INFO 3324 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 24ms. Found 2 repository interfaces.
-2021-01-07 11:19:31.170  INFO 3324 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$dd978799] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2021-01-07 11:19:31.619  INFO 3324 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
-2021-01-07 11:19:31.719  INFO 3324 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-07 11:19:31.720  INFO 3324 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
-2021-01-07 11:19:32.012  INFO 3324 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-07 11:19:32.014  INFO 3324 --- [    Test worker] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1520 ms
-2021-01-07 11:19:32.314  INFO 3324 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-01-07 11:19:32.321  INFO 3324 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2021-01-07 11:19:32.365  INFO 3324 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2021-01-07 11:19:32.380  INFO 3324 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-Hibernate: drop table if exists posts
-Hibernate: drop table if exists user
-Hibernate: create table posts (id bigint not null auto_increment, created_date datetime, modified_date datetime, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB
-Hibernate: create table user (id bigint not null auto_increment, created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB
-2021-01-07 11:19:32.532  INFO 3324 --- [    Test worker] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@4be6537d'
-2021-01-07 11:19:32.532  INFO 3324 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-07 11:19:33.178  INFO 3324 --- [    Test worker] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2021-01-07 11:19:33.491  INFO 3324 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dfbb914, org.springframework.security.web.context.SecurityContextPersistenceFilter@444788b, org.springframework.security.web.header.HeaderWriterFilter@1a6bd91f, org.springframework.security.web.authentication.logout.LogoutFilter@32a74767, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@310d0d21, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4ede0676, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1500f56c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2f0f9b8b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44b998cf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5e1266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76b2ff4e, org.springframework.security.web.session.SessionManagementFilter@47ea442d, org.springframework.security.web.access.ExceptionTranslationFilter@4e11d591, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@183b51b9]
-2021-01-07 11:19:33.838  INFO 3324 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-07 11:19:33.868  WARN 3324 --- [    Test worker] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-07 11:19:33.928  INFO 3324 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2021-01-07 11:19:34.634  INFO 3324 --- [    Test worker] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
-2021-01-07 11:19:34.683  INFO 3324 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 34527 (http) with context path ''
-2021-01-07 11:19:34.686  INFO 3324 --- [    Test worker] c.j.s.web.PostsApiControllerTest         : Started PostsApiControllerTest in 4.259 seconds (JVM running for 20.035)
-2021-01-07 11:19:34.756  INFO 3324 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 11:19:34.758  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 11:19:34.779  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 20 ms
->>>>>>> Stashed changes
-Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-Hibernate: delete from posts where id=?
-<<<<<<< Updated upstream
-2021-01-07 15:33:10.917  INFO 28696 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 15:33:10.917  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 15:33:10.920  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-=======
-2021-01-07 11:19:35.141  INFO 3324 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 11:19:35.142  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 11:19:35.149  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 6 ms
->>>>>>> Stashed changes
-Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
-Hibernate: select posts0_.id as id1_0_0_, posts0_.created_date as created_2_0_0_, posts0_.modified_date as modified3_0_0_, posts0_.author as author4_0_0_, posts0_.content as content5_0_0_, posts0_.title as title6_0_0_ from posts posts0_ where posts0_.id=?
-Hibernate: delete from posts where id=?
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-<<<<<<< Updated upstream
-2021-01-07 15:33:10.947  INFO 28696 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 15:33:10.947  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 15:33:10.950  INFO 28696 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-=======
-2021-01-07 11:19:35.236  INFO 3324 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
-2021-01-07 11:19:35.242  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2021-01-07 11:19:35.245  INFO 3324 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
->>>>>>> Stashed changes
-Hibernate: insert into posts (created_date, modified_date, author, content, title) values (?, ?, ?, ?, ?)
-Hibernate: select posts0_.id as id1_0_0_, posts0_.created_date as created_2_0_0_, posts0_.modified_date as modified3_0_0_, posts0_.author as author4_0_0_, posts0_.content as content5_0_0_, posts0_.title as title6_0_0_ from posts posts0_ where posts0_.id=?
-Hibernate: update posts set created_date=?, modified_date=?, author=?, content=?, title=? where id=?
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-Hibernate: select posts0_.id as id1_0_, posts0_.created_date as created_2_0_, posts0_.modified_date as modified3_0_, posts0_.author as author4_0_, posts0_.content as content5_0_, posts0_.title as title6_0_ from posts posts0_
-Hibernate: delete from posts where id=?
+<pre>2021-01-08 10:59:28.517  INFO 32632 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.jung.springbook.web.PostsApiControllerTest], using SpringBootContextLoader
+2021-01-08 10:59:28.519  INFO 32632 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.jung.springbook.web.PostsApiControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-08 10:59:28.519  INFO 32632 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.jung.springbook.web.PostsApiControllerTest]: PostsApiControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-01-08 10:59:28.521  INFO 32632 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.jung.springbook.Application for test class com.jung.springbook.web.PostsApiControllerTest
+2021-01-08 10:59:28.523  INFO 32632 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2021-01-08 10:59:28.525  INFO 32632 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@11816bd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@11a26d8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@14625ba, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@19fd768, org.springframework.test.context.support.DirtiesContextTestExecutionListener@791d8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@748a6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a2c029, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@1d77cc2, org.springframework.test.context.event.EventPublishingTestExecutionListener@1f8a171, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1368a50, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1fba197, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@158f186, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@1e13435, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@324cd3, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@75a21b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@99a112]
+2021-01-08 10:59:28.538  INFO 32632 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-01-08 10:59:28.538  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-08 10:59:28.539  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-01-08 10:59:28.625  INFO 32632 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-01-08 10:59:28.626  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-08 10:59:28.627  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2021-01-08 10:59:28.667  INFO 32632 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2021-01-08 10:59:28.667  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-01-08 10:59:28.669  INFO 32632 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
 </pre>
 </span>
 </div>
@@ -217,11 +123,7 @@ Hibernate: delete from posts where id=?
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<<<<<<< Updated upstream
-<a href="http://www.gradle.org">Gradle 4.10.2</a> at 2021. 1. 7 오후 3:33:11</p>
-=======
-<a href="http://www.gradle.org">Gradle 4.10.2</a> at Jan 7, 2021 11:19:37 AM</p>
->>>>>>> Stashed changes
+<a href="http://www.gradle.org">Gradle 6.7.1</a> at 2021. 1. 8 오전 10:59:29</p>
 </div>
 </div>
 </body>

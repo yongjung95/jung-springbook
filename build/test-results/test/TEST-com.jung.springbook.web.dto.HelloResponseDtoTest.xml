@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< Updated upstream
-<testsuite name="com.jung.springbook.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-07T06:33:09" hostname="AS0-W-N02169" time="0.003">
+<testsuite name="com.jung.springbook.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-08T01:59:23" hostname="AS0-W-N02169" time="0.003">
   <properties/>
-  <testcase name="롬복_기능_테스트" classname="com.jung.springbook.web.dto.HelloResponseDtoTest" time="0.003"/>
-=======
-<testsuite name="com.jung.springbook.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-07T02:19:35" hostname="jung-springbook" time="0.001">
-  <properties/>
-  <testcase name="롬복_기능_테스트" classname="com.jung.springbook.web.dto.HelloResponseDtoTest" time="0.001"/>
->>>>>>> Stashed changes
+  <testcase name="롬복_기능_테스트()" classname="com.jung.springbook.web.dto.HelloResponseDtoTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
