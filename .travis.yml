@@ -51,6 +51,7 @@ deploy: # (5) S3 로 파일 업로드 혹은 CodeDeploy 로 배포등 외부서�
     deployment_group: jung-springbook-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
+    skip_cleanup: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
