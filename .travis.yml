@@ -53,7 +53,6 @@ deploy: # (5) S3 로 파일 업로드 혹은 CodeDeploy 로 배포등 외부서�
     wait-until-deployed: true
     skip_cleanup: true
 
-
 # CI 실행 완료시 메일로 알람
 notifications:
   email:
