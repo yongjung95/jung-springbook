@@ -16,22 +16,32 @@ cache:
 
 script: "./gradlew clean build"
 
-before_deploy:
-  - zip -r jung-springbook *
-  - mkdir -p deploy
-  - mv jung-springbook.zip deploy/jung-springbook.zip
+before_deploy: # (1) deploy 명령어가 실행되기전에 수행된다. CodeDeploy 는 jar 파일은 인식하지 못하므로 Jar+기타 설정 파일들을 모아 압축한다.
+  - zip -r jung-springbook * # (2) 현재 위치의 모든 파일을 jung-springbook 이름으로 압축한다. 명령어의 마지막 위치는 본인의 프로젝트 이름이여야 한다.
+  - mkdir -p deploy # (3) deploy 라는 디렉토리를 Travis CI 가 실행 중인 위치에서 실행한다.
+  - mv jung-springbook.zip deploy/jung-springbook.zip # (4) zip 파일을 이동.
 
-deploy:
+deploy: # (5) S3 로 파일 업로드 혹은 CodeDeploy 로 배포등 외부서비스와 연동될 행위들을 선언한다.
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings 에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings 에 설정된 값
     bucket: jung-springbook-build # S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip 파일 접근을 private으로
-    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    acl: private # zip 파일 접근을 private 으로
+    local_dir: deploy # before_deploy 에서 생성한 디렉토리 / 앞에서 생성한 deploy 디렉토리를 지정한다. 해당위치의 파일들만 S3 로 전송
     wait-until-deployed: true
 
+  - provider: codedeploy
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    bucket: jung-springbook-build # S3 버킷
+    key: jung-springbook.zip # 빌드 파일을 압축해서 전달
+    bundle_type: zip
+    application: jung-springbook # 웹 콘솔에서 등록한 CodeDeploy 어플리케이션
+    deployment_group: jung-springbook-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
+    region: ap-northeast-2
+    wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
