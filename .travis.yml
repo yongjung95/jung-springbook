@@ -6,8 +6,6 @@ branches:
   only:
     - master
 
-before_install:
-  - chmod +x gradlew
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -16,29 +14,24 @@ cache:
 
 script: "./gradlew clean build"
 
-before_deploy: # (1) deploy 명령어가 실행되기전에 수행된다. CodeDeploy 는 jar 파일은 인식하지 못하므로 Jar+기타 설정 파일들을 모아 압축한다.
-  # 코드 수정 - zip -r jung-springbook * # (2) 현재 위치의 모든 파일을 jung-springbook 이름으로 압축한다. 명령어의 마지막 위치는 본인의 프로젝트 이름이여야 한다.
-  # 코드 수정 - mkdir -p deploy # (3) deploy 라는 디렉토리를 Travis CI 가 실행 중인 위치에서 실행한다.
-  # 코드 수정 - mv jung-springbook.zip deploy/jung-springbook.zip # (4) zip 파일을 이동.
-
-  - mkdir -p before-deploy # zip 에 포함시킬 파일들을 담을 디렉토리 생성  (6) Travis CI 는 S3 로 특정 파일만 업로드가 안된다. 디렉토리 단위로만 업로드할 수 있기 때문에 deploy 디렉토리는 항상 생성한다.
-  - cp scripts/*.sh before-deploy/ # (7) before-deploy 에는 zip 파일에 포함시킬 파일들을 저장한다.
+before_deploy:
+  - mkdir -p before-deploy # zip에 포함시킬 파일들을 담을 디렉토리 생성
+  - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
   - cp build/libs/*.jar before-deploy/
-  - cd before-deploy && zip -r before-deploy * # before-deploy 로 이동후 전체 압축 (8) zip -r 명령어를 통해 before-deploy 디렉토리 전체 파일을 압축한다.
+  - cd before-deploy && zip -r before-deploy * # before-deploy로 이동후 전체 압축
   - cd ../ && mkdir -p deploy # 상위 디렉토리로 이동후 deploy 디렉토리 생성
-  - mv before-deploy/before-deploy.zip deploy/jung-springbook.zip # deploy 로 zip 파일 이동
+  - mv before-deploy/before-deploy.zip deploy/jung-springbook.zip # deploy로 zip파일 이동
 
-
-deploy: # (5) S3 로 파일 업로드 혹은 CodeDeploy 로 배포등 외부서비스와 연동될 행위들을 선언한다.
+deploy:
   - provider: s3
-    access_key_id: $AWS_ACCESS_KEY # Travis repo settings 에 설정된 값
-    secret_access_key: $AWS_SECRET_KEY # Travis repo settings 에 설정된 값
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
     bucket: jung-springbook-build # S3 버킷
     region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip 파일 접근을 private 으로
-    local_dir: deploy # before_deploy 에서 생성한 디렉토리 / 앞에서 생성한 deploy 디렉토리를 지정한다. 해당위치의 파일들만 S3 로 전송
+    acl: private # zip 파일 접근을 private으로
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
     wait-until-deployed: true
 
   - provider: codedeploy
@@ -51,8 +44,6 @@ deploy: # (5) S3 로 파일 업로드 혹은 CodeDeploy 로 배포등 외부서�
     deployment_group: jung-springbook-group # 웹 콘솔에서 등록한 CodeDeploy 배포 그룹
     region: ap-northeast-2
     wait-until-deployed: true
-    skip_cleanup: true
-
 
 # CI 실행 완료시 메일로 알람
 notifications:
