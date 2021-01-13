@@ -41,7 +41,7 @@ deploy:
     bundle_type: zip
     application: jung-springbook
     deployment_group: jung-springbook-group
-    region: ap-nertheast-2
+    region: ap-northeast-2
     wait-until-deployed: true
 
 # CI 실행 완료 시 메일로 알람
