@@ -34,8 +34,9 @@ com/jung/springbook/web/dto/PostsUpdateRequestDto.java
  com.jung.springbook.web.dto.PostsUpdateRequestDto$PostsUpdateRequestDtoBuilder
 com/jung/springbook/config/auth/LoginUserArgumentResolver.java
  com.jung.springbook.config.auth.LoginUserArgumentResolver
-com/jung/springbook/web/IndexController.java
- com.jung.springbook.web.IndexController
+com/jung/springbook/domain/posts/Posts.java
+ com.jung.springbook.domain.posts.Posts
+ com.jung.springbook.domain.posts.Posts$PostsBuilder
 com/jung/springbook/web/PostsApiController.java
  com.jung.springbook.web.PostsApiController
 com/jung/springbook/domain/posts/PostsRepository.java
@@ -46,8 +47,7 @@ com/jung/springbook/Application.java
  com.jung.springbook.Application
 com/jung/springbook/web/dto/PostsResponseDto.java
  com.jung.springbook.web.dto.PostsResponseDto
+com/jung/springbook/web/IndexController.java
+ com.jung.springbook.web.IndexController
 com/jung/springbook/config/auth/SecurityConfig.java
  com.jung.springbook.config.auth.SecurityConfig
-com/jung/springbook/domain/posts/Posts.java
- com.jung.springbook.domain.posts.Posts
- com.jung.springbook.domain.posts.Posts$PostsBuilder
