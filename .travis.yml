@@ -52,4 +52,4 @@ deploy:
 notifications:
   email:
     recipients:
-      - "yongjung95@gmail.com"
+      - yongjung95@gmail.com
