@@ -44,9 +44,4 @@ public class IndexController {
 
         return "posts-update";
     }
-
-    @GetMapping("/test")
-    public String testApi(){
-        return "testApi";
-    }
 }

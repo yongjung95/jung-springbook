@@ -47,6 +47,8 @@ com/jung/springbook/Application.java
  com.jung.springbook.Application
 com/jung/springbook/web/dto/PostsResponseDto.java
  com.jung.springbook.web.dto.PostsResponseDto
+com/jung/springbook/web/ProfileController.java
+ com.jung.springbook.web.ProfileController
 com/jung/springbook/web/IndexController.java
  com.jung.springbook.web.IndexController
 com/jung/springbook/config/auth/SecurityConfig.java
