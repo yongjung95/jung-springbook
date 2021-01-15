@@ -4,8 +4,8 @@ com/jung/springbook/config/JpaConfig.java
  com.jung.springbook.config.JpaConfig
 com/jung/springbook/domain/user/UserRepository.java
  com.jung.springbook.domain.user.UserRepository
-com/jung/springbook/config/auth/CustomOAuth2UserService.java
- com.jung.springbook.config.auth.CustomOAuth2UserService
+com/jung/springbook/config/auth/SecurityConfig.java
+ com.jung.springbook.config.auth.SecurityConfig
 com/jung/springbook/domain/user/User.java
  com.jung.springbook.domain.user.User
  com.jung.springbook.domain.user.User$UserBuilder
@@ -13,9 +13,8 @@ com/jung/springbook/domain/user/Role.java
  com.jung.springbook.domain.user.Role
 com/jung/springbook/web/HelloController.java
  com.jung.springbook.web.HelloController
-com/jung/springbook/config/auth/dto/OAuthAttributes.java
- com.jung.springbook.config.auth.dto.OAuthAttributes
- com.jung.springbook.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
+com/jung/springbook/web/IndexController.java
+ com.jung.springbook.web.IndexController
 com/jung/springbook/web/dto/PostsListResponseDto.java
  com.jung.springbook.web.dto.PostsListResponseDto
 com/jung/springbook/domain/BaseTimeEntity.java
@@ -49,7 +48,8 @@ com/jung/springbook/web/dto/PostsResponseDto.java
  com.jung.springbook.web.dto.PostsResponseDto
 com/jung/springbook/web/ProfileController.java
  com.jung.springbook.web.ProfileController
-com/jung/springbook/web/IndexController.java
- com.jung.springbook.web.IndexController
-com/jung/springbook/config/auth/SecurityConfig.java
- com.jung.springbook.config.auth.SecurityConfig
+com/jung/springbook/config/auth/CustomOAuth2UserService.java
+ com.jung.springbook.config.auth.CustomOAuth2UserService
+com/jung/springbook/config/auth/dto/OAuthAttributes.java
+ com.jung.springbook.config.auth.dto.OAuthAttributes
+ com.jung.springbook.config.auth.dto.OAuthAttributes$OAuthAttributesBuilder
