@@ -9,3 +9,15 @@
 - switch.sh : 엔진엑스가 바라보는 스프링 부트를 최신 버전으로 변경
 
 - profile.sh : 앞선 4개 스크립트 파일에서 공용으로 사용할 'profile' 과 포트 체크 로직
+
+#### profile.sh
+```
+if [ ${RESPONSE_CODE} -ge 400 ]
+then
+CURRENT_PROFILE=real2
+else
+CURRENT_PROFILE=$(curl -s http://localhost/profile)
+fi
+```
+이슈가 있을 경우 real1에 배포하기 위해서 강제로 현재 포트를 real2로 두는 정책 
+ 
