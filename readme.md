@@ -1,3 +1,8 @@
+http://ec2-13-124-125-239.ap-northeast-2.compute.amazonaws.com/
+
+AWS 이용한 배포
+
+
 ###무중단 배포를 진핼할 스크립트
 
 - stop.sh : 기존 엔진엑스에 연결되어 있진 않지만, 실행 중이던 스프링 부트 종료
