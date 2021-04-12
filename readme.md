@@ -1,4 +1,4 @@
-http://ec2-13-124-125-239.ap-northeast-2.compute.amazonaws.com/
+http://ec2-13-124-125-239.ap-northeast-2.compute.amazonaws.com/ (현재 다른 프로젝트가 배포되어서 링크 삭제)
 
 AWS 이용한 배포
 
